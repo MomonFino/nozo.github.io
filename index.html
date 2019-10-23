@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="サイトの説明">
+<meta name="keywords" content="検索にヒットするキーワード">
+<title>のぞれんじゃー</title>
+<base target="_blank">
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<!--【Google】-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+<!--【javascript】-->
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+//端末
+$(function(){
+	var ua = navigator.userAgent;
+	if((ua.indexOf('iPhone') > 0) || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)){
+		$('head').prepend('<meta name="viewport" content="width=device-width,initial-scale=1">');
+	} else {
+		$('head').prepend('<meta name="viewport" content="width=1200">');
+	}
+});
+
+//ヘッターの高さだけ余白空け
+$(function(){
+	var head_h = $('header').outerHeight(true);
+	$('#main').css('padding-top',head_h);
+	$('#nav-content').css('top',head_h);
+});
+
+//スムーススクロール
+$(function(){
+	$('a[href^="#"]').click(function(){
+		var speed = 500;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		$("html, body").animate({scrollTop:position}, speed, "swing");
+		return false;
+	});
+});
+</script>
+</head>
+<body>
+<!--【ヘッダー】-->
+<header>
+	<div class="inner">
+		<h1><a href="index.html"><img src="img/logo.svg" class="" alt="logo"></a></h1>
+		<nav class="display_pc">
+			<ul>
+				<li><a href="#Company">ひとこと<i class="material-icons">keyboard_arrow_right</i></a></li>
+				<li><a href="#About">のぞれんじゃー？<i class="material-icons">keyboard_arrow_right</i></a></li>
+				<li><a href="#Idea">基本理念<i class="material-icons">keyboard_arrow_right</i></a></li>
+				<li><a href="#Business">仕事<i class="material-icons">keyboard_arrow_right</i></a></li>
+				<li><a href="#Access">アジト<i class="material-icons">keyboard_arrow_right</i></a></li>
+			</ul>
+		</nav>
+		<div id="nav-drawer" class="display_sp">
+			<input id="nav-input" type="checkbox" class="nav-unshown">
+			<label id="nav-open" for="nav-input"><span></span></label>
+			<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+			<div id="nav-content">
+				<nav>
+					<ul>
+						<li><a href="#Company"><i class="material-icons">keyboard_arrow_right</i> ひとこと</a></li>
+						<li><a href="#About"><i class="material-icons">keyboard_arrow_right</i> のぞれんじゃー？</a></li>
+						<li><a href="#Idea"><i class="material-icons">keyboard_arrow_right</i> 基本理念</a></li>
+						<li><a href="#Business"><i class="material-icons">keyboard_arrow_right</i> 仕事</a></li>
+						<li><a href="#Access"><i class="material-icons">keyboard_arrow_right</i> アジト</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<!--【コンテンツ】-->
+<div id="main">
+	<!--メインビジュアル-->
+	<div class="mv">
+		<div class="msg">
+			<h2>のぞれんじゃー</h2>
+			<h3>そうだ、私が最強の会社(チーム)を<br class="display_sp">つくればいいんだ！</h3>
+		</div>
+	</div>
+	<!--代表のひとこと-->
+	<section id="Company">
+		<h2 class="sub-head"><i class="material-icons">pets</i> 代表のひとこと</h2>
+		<div class="inner">
+			<p>皆さん、はじめまして。<strong>のぞれんじゃー</strong>のチームリーダー、のぞみです！</p>
+			<p>突然になりますが、私はガッチリ作り上げられた組織で働くことが好きではありません。<br>
+				でも、お客さんとお話をしたりといった働くこと自体は、大好きです。<br>
+				その2つを天秤にかけた結果思いつきました。</p>
+			<p>「そうだ、私が最強の会社(チーム)をつくればいいんだ！」</p>
+			<p>そうして私が身の回りの最強のメンバーを集めて作ったのが、<strong>のぞれんじゃー</strong>です。</p>
+			<p><strong>のぞれんじゃー</strong>は常に挑戦します。<br>
+				相手がどれほど強くても、一度決めたら諦めず挑み続け、絶対に勝ち取ります。</p>
+			<p>その姿勢を世界中のオタク仲間に広めて、もっともっと快適に推し事をできる世界を実現したいと思います！</p>
+		</div>
+	</section>
+	<!--のぞれんじゃー？-->
+	<section id="About">
+		<h2 class="sub-head"><i class="material-icons">pets</i> のぞれんじゃー？</h2>
+		<div class="inner">
+			<p><strong>のぞれんじゃー</strong>は、のぞみ・みさこ・みく・はすた・はやすんの5人組です。<br>
+				リーダーのぞみの周りに集まった4人のメンバーは、それぞれ違う分野のエキスパートたちです。</p>
+			<p>＜ここにメンバー紹介 / 後で詳細を詰めませう＞</p>
+			<p><strong>のぞれんじゃー</strong>という名前は、そのまんまリーダーの名前に由来しています。<br>
+				すべての言い出しっぺで、みんなを引っ張り、決断するリーダーのぞみが、<strong>のぞれんじゃー</strong>の原点です。</p>
+		</div>
+	</section>
+	<!--のぞれんじゃーの基本理念-->
+	<section id="Idea">
+		<h2 class="sub-head"><i class="material-icons">pets</i> のぞれんじゃーの<br class="display_sp">基本理念</h2>
+		<div class="inner">
+			<dl>
+				<dt>みんなHAPPY！</dt>
+				<dd>たかぎ</dd>
+				<dt>毎日挑戦！</dt>
+				<dd>はすた</dd>
+				<dt>一度決めたらどんどん突き進もう！</dt>
+				<dd>みさこ</dd>
+				<dt>馴れ合い禁止、自分の意見をはっきり言う！</dt>
+				<dd>はやすん</dd>
+				<dt>視野は常に広く柔軟に！</dt>
+				<dd>みく</dd>
+			</dl>
+		</div>
+	</section>
+	<!--のぞれんじゃーの仕事-->
+	<section id="Business">
+		<h2 class="sub-head"><i class="material-icons">pets</i> のぞれんじゃーの仕事</h2>
+		<div class="inner">
+			<p><strong>のぞれんじゃー</strong>は、すべてのオタクの推し事を応援します。<br>
+				特に、オタクにとっては、時間は酸素や水の次くらいに貴重な存在です。<br>
+				推し事におけるわずらわしい手間を減らし、もっともっと推し事に時間を割ける世界を目指しています。</p>
+			<p>「ヲタ活をもっとスムーズに、充実するように、そしてHAPPYに！」</p>
+			<p>をテーマに、Webサービスやアプリを提供していきます！</p>
+			<p>＜以下サービス・アプリ紹介 / 一旦省略＞</p>
+		</div>
+	</section>
+	<!--のぞれんじゃーのアジト-->
+	<section id="Access">
+		<h2 class="sub-head"><i class="material-icons">pets</i> のぞれんじゃーの<br class="display_sp">アジト</h2>
+		<div class="inner">
+			<p>のぞれんじゃーには決まったアジトがありません。<br>
+				のぞれんじゃーのメンバーは、普段はそれぞれ世を忍ぶ仮の姿に扮して生活をしています。<br>
+				そして週に1度か2度、池袋あたりの貸し会議室に集まり、作戦会議をしています。</p>
+			<p>ぞれんじゃーにお願い事がある場合は、<a href="mailto:info@nozoranger.jp">info@nozoranger.jp</a>までお気軽にお問い合わせください！</p>
+		</div>
+	</section>
+	<!--TOPに戻る-->
+	<div class="gotop">
+		<a href="#main"><i class="material-icons">expand_less</i></a>
+	</div>
+</div>
+<!--【フッター】-->
+<footer>
+	<div class="inner">
+		<div class="footer_logo"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></div>
+		<div class="footer_txt">
+			<p>Copyright <span lang="en">&copy;</span> <script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script> のぞれんじゃー All Rights Reserved. <br>掲載の情報・画像など、すべてのコンテンツの無断複写・転載を禁じます。</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
